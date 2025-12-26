@@ -20,7 +20,8 @@
 	],
 	"links": {
 		"community": "https://discord.gg/HbVWkrGwnR",
-		"homepage": "https://delivel.tech"
+		"homepage": "https://delivel.tech",
+		"source": "https://github.com/delivel-tech/Diamonds-in-Profile"
 	},
 	"developer": "delivel",
 	"description": "Adds diamonds into profile."

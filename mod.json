@@ -8,11 +8,7 @@
 	},
 	"id": "delivel.diamonds-in-profile",
 	"name": "Diamonds in Profile",
-<<<<<<< HEAD
 	"version": "v1.0.2",
-=======
-	"version": "v1.0.1",
->>>>>>> d6eb8573f00c4e9161704d2c8d9c670160e423ca
 	"dependencies": {
 		"geode.node-ids": "v1.18.0"
 	},

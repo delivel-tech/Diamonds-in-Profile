@@ -5,11 +5,14 @@
 
 using namespace geode::prelude;
 
-std::string formatWithCommas(int64_t value) {
-    std::stringstream ss;
-    ss.imbue(std::locale("en_US.UTF-8"));
-    ss << value;
-    return ss.str();
+std::string formatWithCommas(int n) {
+    std::string result = numToString(n);
+
+    for (int i = result.size() - 3; i > 0; i -= 3) {
+        result.insert(i, ",");
+    }
+
+    return result;
 }
 
 class $modify(DiamondsProfilePage, ProfilePage) {

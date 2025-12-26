@@ -1,0 +1,27 @@
+{
+	"geode": "4.10.0",
+	"gd": {
+		"win": "2.2074",
+		"android": "2.2074",
+		"mac": "2.2074",
+		"ios": "2.2074"
+	},
+	"id": "delivel.diamonds-in-profile",
+	"name": "Diamonds in Profile",
+	"version": "v1.0.0",
+	"dependencies": {
+		"geode.node-ids": "v1.18.0"
+	},
+	"tags": [
+		"customization",
+		"interface",
+		"utility",
+		"universal"
+	],
+	"links": {
+		"community": "https://discord.gg/HbVWkrGwnR",
+		"homepage": "https://delivel.tech"
+	},
+	"developer": "delivel",
+	"description": "Adds diamonds into profile."
+}

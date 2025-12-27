@@ -22,8 +22,8 @@ class $modify(DiamondsProfilePage, ProfilePage) {
         return true;
     }
 
-void getUserInfoFinished(GJUserScore* score) {
-    ProfilePage::getUserInfoFinished(score);
+void loadPageFromUserInfo(GJUserScore* score) {
+    ProfilePage::loadPageFromUserInfo(score);
 
     auto statsMenu = m_mainLayer->getChildByID("stats-menu");
     if (!statsMenu) return;

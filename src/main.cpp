@@ -37,6 +37,9 @@ void getUserInfoFinished(GJUserScore* score) {
     auto moonsIcon = statsMenu->getChildByIDRecursive("moons-icon");
     if (!moonsIcon) return;
 
+    auto starsIcon = statsMenu->getChildByIDRecursive("stars-icon");
+    if (!starsIcon) return;
+
     auto text = formatWithCommas(score->m_diamonds);
     auto label = CCLabelBMFont::create(text.c_str(), "bigFont.fnt");
     label->setScale(0.6f);
@@ -49,7 +52,7 @@ void getUserInfoFinished(GJUserScore* score) {
     auto ls = label->getScaledContentSize();
     auto is = icon->getScaledContentSize();
 
-    float gap = 3.f;
+    float gap = 2.f;
     float pad = 2.f;
     float h = std::max(ls.height, is.height);
     float w = pad + ls.width + gap + is.width + pad;
@@ -67,7 +70,11 @@ void getUserInfoFinished(GJUserScore* score) {
     entry->addChild(label);
     entry->addChild(icon);
 
-    statsMenu->insertAfter(entry, moonsIcon);
+    if (Mod::get()->getSettingValue<bool>("after-stars")) {
+        statsMenu->insertAfter(entry, starsIcon);
+    } else {
+        statsMenu->insertAfter(entry, moonsIcon);
+    }
     statsMenu->updateLayout();
 }
 };

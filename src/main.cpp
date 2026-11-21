@@ -1,19 +1,8 @@
 #include <Geode/Geode.hpp>
+#include <Geode/binding/GameToolbox.hpp>
 #include <Geode/modify/ProfilePage.hpp>
-#include <sstream>
-#include <locale>
 
 using namespace geode::prelude;
-
-std::string formatWithCommas(int n) {
-    std::string result = numToString(n);
-
-    for (int i = result.size() - 3; i > 0; i -= 3) {
-        result.insert(i, ",");
-    }
-
-    return result;
-}
 
 class $modify(DiamondsProfilePage, ProfilePage) {
     bool init(int accountID, bool ownProfile) {
@@ -40,12 +29,12 @@ void loadPageFromUserInfo(GJUserScore* score) {
     auto starsIcon = statsMenu->getChildByIDRecursive("stars-icon");
     if (!starsIcon) return;
 
-    auto text = formatWithCommas(score->m_diamonds);
-    auto label = CCLabelBMFont::create(text.c_str(), "bigFont.fnt");
+    auto text = GameToolbox::pointsToString(score->m_diamonds);
+    auto label = geode::Label::create(text, "bigFont.fnt");
     label->setScale(0.6f);
 
     const float maxLabelW = 58.f;
-    label->limitLabelWidth(maxLabelW, 0.6f, 0.2f);
+    label->setLimitLabelWidth(maxLabelW, 0.6f, 0.2f);
 
     auto icon = CCSprite::createWithSpriteFrameName("GJ_diamondsIcon_001.png");
 

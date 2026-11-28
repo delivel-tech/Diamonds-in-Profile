@@ -1,5 +1,13 @@
-# Diamonds in Profile
+# ![💎](frame:GJ_diamondsIcon_001.png?scale=0.75) Diamonds in Profile
 
-### This mod adds diamonds to profile, as it was in 2.1.
+## About
+> ![ℹ️](frame:GJ_infoIcon_001.png?scale=0.5) <cg>*Adds diamonds to stats menu in Profile Page as it used to be before update 2.2!*</c>
 
-If you meet any bugs or suggestions, feel free to contact me.
+---
+
+### Credits
+- **[Cheeseworks](user:6408873)**: about.md description appearence example, I really liked it :3
+
+---
+
+![🗨️](frame:gj_discordIcon_001.png?scale=0.375) **By the way, consider joining my <cp>[Discord Server](https://discord.gg/Tunmwu86W3)</c> <3**
